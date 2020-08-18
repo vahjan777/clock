@@ -9,21 +9,32 @@
 <div class="alarmClock">
     <div class="container">
         <div class = "box1 box" >
-            <h1 id = "time"> </h1>
 
-                <p>Start Time</p>
-            <label for="inputTime"></label><input id = "inputTime" type = "time">
-                <button id = "setButton" onClick = "setTime()"> Start </button>
+            <div class="clock">
+                <span id="hr">00</span>
+                <span> : </span>
+                <span id="min">00</span>
+                <span> : </span>
+                <span id="sec">00</span>
+            </div>
+
+            <p>Start Time</p>
+            <label for="inputTime">
+                <input id = "inputTime" type = "time">
+            </label>
+                <button  onClick = "setTime()"> Start </button>
 
         </div>
         <div class = "box2 box">
             <p>Name</p>
-            <label>
-                <input id = "alarmName">
+            <label for = "alarmName">
+                <input id = "alarmName" type = "text">
             </label>
             <p>Time</p>
-            <input id = "alarmTime">
-            <button id = "eventAlarm">Create</button>
+            <label for = "alarmTime" >
+                <input id = "alarmTime" type = "time">
+            </label>
+            <button onclick = "setAlarm()" id = "alarmButton" > Create </button>
         </div>
     </div>
 </div>
