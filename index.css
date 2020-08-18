@@ -4,10 +4,22 @@
     box-sizing: border-box;
 }
 
-.clock {
-    width: 500px;
-    height: 200px;
+.alarmClock {
+    width: 800px;
+    height: 400px;
     background-color: azure;
-    border: 3px solid black;
+    border: 1px solid black;
     border-radius: 10px;
+}
+
+.box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container {
+    width: 380px;
+    height: 380px;
+    background-color: aqua;
 }
