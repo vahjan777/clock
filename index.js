@@ -4,17 +4,6 @@ const alarmButton = document.getElementById('alarmButton');
 let h,m,s,ah,am,as,animate;
 let GlobalDate = new Date();
 
-// function checkParams() {
-//     if (alarmTime.value.length != 0 && alarmName.value.length != 0) {
-//         alarmButton.removeAttr('disabled');
-//     } else {
-//         alarmButton.attr('disabled', 'disabled');
-//     }
-// }
-
-// if(alarmTime.value.length != 0 && alarmName.value.length != 0) {
-//     alarmButton.removeAttr('disabled');
-// }
 
 function init(){
     h = GlobalDate.getHours();
@@ -58,7 +47,9 @@ init();
 
 
 function setTime() {
-
+    if (document.getElementById('inputTime').value.length == 0){
+        return ;
+    }
     const valueSplitted = document.getElementById('inputTime').value.split(':');
     h = +valueSplitted[0];
     m = +valueSplitted[1];
@@ -66,8 +57,12 @@ function setTime() {
 }
 
 function setAlarm() {
-    // const alarmValue = alarmName.value;
+    if (alarmTime.value.length == 0 && alarmName.value.length == 0){
+        return ;
+    }
+    const alarmValue = alarmName.value;
     const valueSplitted = alarmTime.value.split(':');
+
     ah = +valueSplitted[0];
     am = +valueSplitted[1];
     as = '00';
